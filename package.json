@@ -115,6 +115,14 @@
       {
         "language": "yaml",
         "path": "./snippets/yaml.json"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/json.json"
+      },
+      {
+        "language": "groovy",
+        "path": "./snippets/groovy.json"
       }
     ]
   }

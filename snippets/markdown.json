@@ -1,1 +1,33 @@
-{}
+{
+  "dllength": {
+    "prefix": "dllength",
+    "body": [
+      "<!-- markdownlint-disable line-length -->"
+    ],
+    "description": "Markdown lint disable line length"
+  },
+  "ellength": {
+    "prefix": "ellength",
+    "body": [
+      "<!-- markdownlint-enable line-length -->"
+    ],
+    "description": "Markdown lint re-enable line length"
+  },
+  "dhtml": {
+    "prefix": "dhtml",
+    "body": [
+      "<!-- markdownlint-disable no-inline-html -->"
+    ],
+    "description": "Markdown lint disable inline html"
+  },
+  "collapse": {
+    "prefix": "collapse",
+    "body": [
+      "<details>",
+      "<summary>Click to reveal</summary>",
+      "",
+      "</details>"
+    ],
+    "description": "Collapsible section of markdown using inline html"
+  }
+}

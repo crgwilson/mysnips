@@ -1,1 +1,11 @@
-{}
+{
+  "trun": {
+    "prefix": "trun",
+    "body": [
+      "t.Run(\"${0:description}\", func(t *testing.T) {",
+      "",
+      "})"
+    ],
+    "description": "New unit test"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "build": {
+    "prefix": "build",
+    "body": [
+      "plugins {",
+      "  id 'java'",
+      "}",
+      "",
+      "repositories {",
+      "  mavenCentral()",
+      "}",
+      "",
+      "jar {",
+      "  manifest {",
+      "    attributes 'Main-Class': '${1:package}'",
+      "  }",
+      "}",
+      "",
+      "dependencies {",
+      "  testImplementation 'junit:junit:4.13.2'",
+      "}"
+    ],
+    "description": "Minimal build.gradle file"
+  }
+}

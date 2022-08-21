@@ -1,1 +1,69 @@
-{}
+{
+  "setup": {
+    "prefix": "setup",
+    "body": [
+      "from setuptools import setup",
+      "",
+      "",
+      "setup()"
+    ],
+    "description": "Standard minimal setup.py"
+  },
+  "break": {
+    "prefix": "break",
+    "body": [
+      "breakpoint()"
+    ],
+    "description": "Create a breakpoint"
+  },
+  "reveal": {
+    "prefix": "reveal",
+    "body": [
+      "reveal_type(${0:item})"
+    ],
+    "description": "MyPy reveal_type()"
+  },
+  "climain": {
+    "prefix": "climain",
+    "body": [
+      "from typing import Optional, Sequence",
+      "",
+      "",
+      "def main(argv: Optional[Sequence[str]] = None) -> int:",
+      "    return 0"
+    ],
+    "description": "Standard main function for a minimal CLI"
+  },
+  "param-test": {
+    "prefix": "param-test",
+    "body": [
+      "@pytest.mark.parametrize(",
+      "    \"arg1,arg2\",",
+      "    [",
+      "        (1, 1),",
+      "    ]",
+      ")",
+      "def ${0:name}(arg1, arg2) -> None:",
+      "    ..."
+    ],
+    "description": "Parametrized pytest"
+  },
+  "fixture": {
+    "prefix": "fixture",
+    "body": [
+      "@pytest.fixture",
+      "def ${0:name}() -> Any:",
+      "   ..."
+    ],
+    "description": "Skeleton for a pytest fixture"
+  },
+  "no-requests": {
+    "prefix": "no-requests",
+    "body": [
+      "@pytest.fixture(autouse=True)",
+      "def no_requests(monkeypatch):",
+      "    monkeypatch.delattr(\"requests.sessions.Session.request\")"
+    ],
+    "description": "Pytest fixture to prevent requests from actually making network calls"
+  }
+}

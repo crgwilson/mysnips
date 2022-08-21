@@ -1,0 +1,15 @@
+{
+  "snippet": {
+    "prefix": "snippet",
+    "body": [
+      "{",
+      "  \"${0:name}\": {",
+      "    \"prefix\": \"${0:name}\"",
+      "    \"body\": [],",
+      "    \"description\": \"\"",
+      "  }",
+      "}"
+    ],
+    "description": "I used the stones to destroy the stones"
+  }
+}
