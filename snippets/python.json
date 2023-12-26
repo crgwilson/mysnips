@@ -23,6 +23,17 @@
     ],
     "description": "MyPy reveal_type()"
   },
+  "main": {
+    "prefix": "main",
+    "body": [
+    "def main() -> int:",
+    "    return 0",
+    "",
+    "",
+    "if __name__ == \"__main__\":",
+    "    raise SystemExit(main())"
+    ]
+  },
   "climain": {
     "prefix": "climain",
     "body": [
