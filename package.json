@@ -123,6 +123,10 @@
       {
         "language": "groovy",
         "path": "./snippets/groovy.json"
+      },
+      {
+        "language": "make",
+        "path": "./snippets/make.json"
       }
     ]
   }
