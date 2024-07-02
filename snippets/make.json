@@ -1,0 +1,31 @@
+{
+  "golang": {
+    "prefix": "golang",
+    "body": [
+      "APPLICATION_NAME:=$(shell basename `pwd`)",
+      "",
+      ".PHONY: build",
+      "build: ## Compile the binary.",
+      "    go fmt ./...",
+      "    go build -o build/${APPLICATION_NAME} ./cmd/${APPLICATION_NAME}",
+      "",
+      ".PHONY: run",
+      "run: build ## Compile the binary and run the app.",
+      "    ./build/${APPLICATION_NAME}",
+      "",
+      ".PHONY: test",
+      "test: ## Run unit tests.",
+      "    go vet ./...",
+      "    go test -race -parallel 4 -cover ./...",
+      "",
+      ".PHONY: clean",
+      "clean: ## Cleanup any existing build artifacts.",
+      "    @rm -rf ./build",
+      "",
+      ".PHONY: help",
+      "help: ## Prints help for targets with comments",
+      "    @cat $(MAKEFILE_LIST) | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | awk 'BEGIN {FS = \":.*?## \"}; {printf \"\\033[36m%-30s\\033[0m %s\\n\", $$1, $$2}'"
+    ],
+    "description": "Minimal makefile for golang projects"
+  }
+}
